@@ -1,0 +1,134 @@
+% Compact Resume Template
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{calc}
+
+
+% Page layout
+\geometry{
+	a4paper,
+	left=0.30cm,
+	right=0.30cm,
+	top=0.3cm,
+	bottom=0.3cm
+}
+
+% Hyperlink setup
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	pdfborder={0 0 0}
+}
+% Custom section formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{4pt}
+
+% Custom item spacing
+\setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=2pt}
+
+\begin{document}
+	\begin{center}
+		{\huge\textbf{Cameron Badman}}
+		\begin{center}
+		\href{mailto:cbadwork@gmail.com}{cbadwork@gmail.com} |
+		+61 476056341 |
+		\href{https://github.com/CameronBadman}{GitHub}| 
+		\href{https://www.linkedin.com/in/cameron-badman-5314ba1b8/}{LinkedIn}
+		\end{center}
+	\end{center}
+	
+	\section{Professional Experience}
+	\textbf{DevOps Engineer, CYBERLOOP} \hfill Jan 2023--Feb 2024 
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Boosted development efficiency by creating CI/CD pipelines that reduced manual testing time by 75\%
+		\item Rewrote automated testing using Playwright, improving sync times of hanging/loading features 
+		\item Reduced migration costs by 20\% by creating a bash script to compress unstructured data on Firebase
+		\item Developed a GenAI-powered tool that assigns labels for difficulty and time automatically
+	\end{itemize}
+	\vspace{0.1cm}
+	
+	\textbf{Teacher Assistant - Cert IV in Cybersecurity, NDIS (TAFE)} \hfill Nov 2021--May 2022 
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Instructed adult learners in foundational Python programming and networking concepts
+		\item Provided hands-on training in network infrastructure, covering switches, routers, and server technologies
+	\end{itemize}
+	\vspace{0.1cm}
+	
+	\textbf{Python Tutor, Junior Engineers} \hfill Jun 2021--Feb 2023 
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Rewrote programming classes for children and teens, making complex coding concepts easier to understand
+		\item Trained new instructors, helping them create engaging classroom experiences that keep students motivated
+		\item Led the advanced classes for 8-16 year olds, teaching Python OOP, Scratch, Arduino, Minitendo
+	\end{itemize}
+	\vspace{0.1cm}
+	
+	\textbf{Project Assistant/Crowdfunding Analyst, Kuranda Industries} \hfill Jul 2022--Nov 2022 
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Supported multi-million dollar real estate investment deals, helping the team make smart, data-driven decisions
+		\item Created predictive models that helped identify promising housing markets faster and more accurately
+		\item Managed minor renovation projects, handling budgeting, recruitment, and planning
+	\end{itemize}
+	
+	\section{Education}
+	\textbf{University of Queensland -- 		Bachelor's Degree, Brisbane, Australia} \hfill 2021--Present \\	
+	\section{Projects and Open-Source Contributions}
+	\textbf{All projects available on} \href{https://github.com/CameronBadman}{GitHub}
+	
+	\textbf{Collaborative Drawing WebApp} \href{https://github.com/CameronBadman/Canvis-collab-webapp}{[GitHub]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item \textbf{Frontend:} Developed using Vite, ThreeJS, and Axios with a custom layer-based HTML canvas drawing system for optimal performance
+		\item \textbf{Backend:} Designed microservice architecture using Go and .NET, implementing Command Query Responsibility Segregation (CQRS)
+		\item \textbf{Infrastructure:} Containerised with Docker, orchestrated via Kubernetes, and deployed on AWS Fargate using Terraform
+		\item Integrated AWS Cognito for secure authentication with scalable data storage using Cassandra, Redis, and Kafka
+	\end{itemize}
+	
+	\textbf{Nix Configuration} \href{https://github.com/CameronBadman/nvim-config}{[GitHub]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Developed a comprehensive Nix-based desktop, this also includes hyprland, waybar, and alacritty configuarion which I currently use as my main driver
+		\item Learnt enough about the Nixos configuration language to use it in a production for easy physical infrastructure
+	\end{itemize}
+	
+	\textbf{Reddit Clone} \href{https://github.com/CameronBadman/Reddit-Clone}{[GitHub]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Created a Reddit client that has in my opinion a better scroll style-Ui built to be more like tiktok 
+		\item Utilizes Vue.js and Quasar component library, with the axios api library
+		\item Implements the base authentication and stream setups from Reddit API integration
+	\end{itemize}
+	
+	\textbf{SongTrax Web and Mobile Platform} \href{https://github.com/CameronBadman/Songtrax-WebApp}{[WebApp]} \href{https://github.com/CameronBadman/Songtrax-NativeApp}{[Native App]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Full-stack 8-bit music sharing platform with web and mobile applications
+		\item Web app built using React, ASP.NET, and PostgreSQL, with the backend being deployed on a Google cloud engine setup
+		\item Mobile app developed using React Native
+	\end{itemize}
+	
+	\textbf{Infrastructure-as-Code Project} \href{https://github.com/CameronBadman/Terraform-docker-API}{[GitHub]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Implemented cloud deployment using AWS Fargate, demonstrating modern DevOps practices
+		\item Gained hands-on experience with infrastructure-as-code principles and cloud infrastructure management
+	\end{itemize}
+	
+	\section{Open-Source Contributions}
+	\textbf{goproxy} \href{https://github.com/elazarl/goproxy}{[GitHub]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Developed and implemented HTTP Archive (HAR) middleware with Prometheus/Grafana integration, utilising goroutines for non-blocking metrics collection
+		\item Working on modernising the project's testing infrastructure
+		\item Transitioning test suite from legacy approaches to more modern testing practices using testify
+	\end{itemize}
+	
+	\section{Technologies and Skills}
+	\textbf{Languages:} Python, JavaScript, TypeScript, Go, C\#, Bash \\
+	\hspace*{0.5cm}\textbf{Web Technologies:} React, Vue.js, ASP.NET, HTML, CSS \\
+	\hspace*{0.5cm}\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, Nix, AWS, GCP \\
+	\hspace*{0.5cm}\textbf{Databases:} PostgreSQL, SQLite, Redis, Cassandra \\
+	\hspace*{0.5cm}\textbf{Tools:} Git, GitHub, Playwright, CI/CD, Kafka, Atlassian
+	
+\end{document}
