@@ -10,7 +10,6 @@
 \usepackage{titlesec}
 \usepackage{calc}
 
-
 % Page layout
 \geometry{
 	a4paper,
@@ -27,6 +26,7 @@
 	urlcolor=blue,
 	pdfborder={0 0 0}
 }
+
 % Custom section formatting
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{2pt}{4pt}
@@ -38,10 +38,10 @@
 	\begin{center}
 		{\huge\textbf{Cameron Badman}}
 		\begin{center}
-		\href{mailto:cbadwork@gmail.com}{cbadwork@gmail.com} |
-		+61 476056341 |
-		\href{https://github.com/CameronBadman}{GitHub}| 
-		\href{https://www.linkedin.com/in/cameron-badman-5314ba1b8/}{LinkedIn}
+			\href{mailto:cbadwork@gmail.com}{cbadwork@gmail.com} |
+			+61 476056341 |
+			\href{https://github.com/CameronBadman}{GitHub}| 
+			\href{https://www.linkedin.com/in/cameron-badman-5314ba1b8/}{LinkedIn}
 		\end{center}
 	\end{center}
 	
@@ -49,8 +49,8 @@
 	\textbf{DevOps Engineer, Cyberloop} \hfill Jan 2023--Feb 2024 
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
 		\item Worked on computer vision components for oil infrastructure identification and distance tracking using OpenCV
-		\item Boosted development efficiency by creating CI/CD pipelines that reduced manual testing time by 75\%
-		\item Implemented and maintained Playwright testing framework for complex UI and graphical interfaces
+		\item Implemented CI/CD pipelines in bitbucket that reduced manual testing time by 75\%
+		\item Refactored cypess tests and maintained Playwright testing infrastructure 
 		\item Reduced migration costs by 20\% by creating a bash script to compress unstructured data on Firebase
 		\item Developed a GenAI-powered tool that assigns labels for difficulty and time automatically
 	\end{itemize}
@@ -58,7 +58,7 @@
 	
 	\textbf{Teacher Assistant - Cert IV in Cybersecurity, NDIS (TAFE)} \hfill Nov 2021--May 2022 
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Instructed adult learners in foundational Python programming and networking concepts
+		\item taught foundational Python programming and networking concepts
 		\item Provided hands-on training in network infrastructure, covering switches, routers, and server technologies
 	\end{itemize}
 	\vspace{0.1cm}
@@ -85,7 +85,7 @@
 	
 	\textbf{Distance Measurement Computer Vision} \href{https://github.com/CameronBadman/computer-vision}{[GitHub]}
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Built a computer vision system using OpenCV and Python to measure distances between squares in real-time
+		\item Built a computer vision system using OpenCV and Python to measure distances between colored squares in real-time
 		\item Implemented color detection and object tracking with live calibration functionality
 		\item Created a Tkinter GUI for real-time measurement display and system controls
 		\item Technologies used: Python, OpenCV, NumPy, Tkinter
@@ -94,24 +94,17 @@
 	\textbf{Collaborative Drawing WebApp} \href{https://github.com/CameronBadman/Canvis-collab-webapp}{[GitHub]}
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
 		\item \textbf{Frontend:} Developed using Vite, ThreeJS, and Axios with a custom layer-based HTML canvas drawing system for optimal performance
-		\item \textbf{Backend:} uses a microservice architecture written in Go and .NET, implementing Command Query Responsibility Segregation (CQRS) based connection system with Kafka to accommodate high concurrent users
-		\item \textbf{Infrastructure:} Containerised with Docker, orchestrated using Kubernetes, and deployed on AWS Fargate using Terraform
-		\item Integrated AWS Cognito for secure authentication with scalable data storage using Cassandra, Redis
-	\end{itemize}
-	
-	\textbf{Nix Configuration} \href{https://github.com/CameronBadman/nvim-config}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Developed a comprehensive Nix-based desktop, this also includes hyprland, waybar, alacritty, neovim, installed using home-manger which I currently use as my desktop driver
-		\item acquired the necessary skills of the Nixos configuration language to use it in a production for easy physical infrastructure
+		\item \textbf{Backend:} Implemented a Go-based microservice architecture utilizing goroutines for efficient concurrent connection handling
+		\item \textbf{Infrastructure:} Containerized with Docker, orchestrated using Kubernetes, and deployed on AWS Fargate with Terraform
+		\item Integrated AWS Cognito for authentication and AWS DynamoDB for scalable data storage
 	\end{itemize}
 	
 	\textbf{Reddit Clone} \href{https://github.com/CameronBadman/Reddit-Clone}{[GitHub]}
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Created a Reddit client that has in my opinion a better scroll style-Ui built to be more like tiktok 
+		\item Created a social media client with an improved scroll-style UI built to be more interactive
 		\item Utilizes Vue.js and Quasar component library, with the axios api library
-		\item Implements the base authentication and stream setups from Reddit API integration
+		\item Implements authentication and stream setups from social media API integration
 	\end{itemize}
-	
 	
 	\section{Open-Source Contributions}
 	\textbf{goproxy} \href{https://github.com/elazarl/goproxy}{[GitHub]}
@@ -123,7 +116,7 @@
 	\section{Technologies and Skills}
 	\textbf{Languages:} Python, JavaScript, TypeScript, Go, C\#, Bash \\
 	\hspace*{0.5cm}\textbf{Web Technologies:} React, Vue.js, ASP.NET, HTML, CSS \\
-	\hspace*{0.5cm}\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, Nix, AWS, GCP \\
+	\hspace*{0.5cm}\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, Nix, GCP \\
 	\hspace*{0.5cm}\textbf{Databases:} PostgreSQL, SQLite, Redis, Cassandra \\
 	\hspace*{0.5cm}\textbf{Tools:} Git, GitHub, Playwright, CI/CD, Kafka, Atlassian
 	
