@@ -13,10 +13,10 @@
 % Page layout
 \geometry{
 	a4paper,
-	left=0.30cm,
-	right=0.30cm,
-	top=0.3cm,
-	bottom=0.3cm
+	left=0.25cm,
+	right=0.25cm,
+	top=0.25cm,
+	bottom=0.25cm
 }
 
 % Hyperlink setup
@@ -29,10 +29,10 @@
 
 % Custom section formatting
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{2pt}{4pt}
+\titlespacing{\section}{0pt}{1pt}{2pt}
 
 % Custom item spacing
-\setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=2pt}
+\setlist[itemize]{itemsep=-1pt, parsep=0pt, topsep=1pt}
 
 \begin{document}
 	\begin{center}
@@ -46,43 +46,54 @@
 	\end{center}
 	
 	\section{Professional Experience}
-	\textbf{DevOps Engineer, Cyberloop} \hfill Jan 2023--Feb 2024 
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Worked on computer vision components for oil infrastructure identification and distance tracking using OpenCV
-		\item Implemented CI/CD pipelines in bitbucket that reduced manual testing time by 75\%
-		\item Refactored cypess tests and maintained Playwright testing infrastructure 
-		\item Reduced migration costs by 20\% by creating a bash script to compress unstructured data on Firebase
-		\item Developed a GenAI-powered tool that assigns labels for difficulty and time automatically
-		\item Maintained, monitored and deployed Docker containers using Portainer and Helm on Google Cloud Engine
-		\item Maintained and optimized postgres database queries using indexation 
+	\textbf{Software Engineer, Base} \hfill Dec 2024--Present 
+	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+		\item Implemented Github CI/CD pipelines to streamline development and deployment processes
+		\item Managed a small group of international developers across multiple time zones
+		\item Performed significant refactors to modularise code, enabling easy switching between monolithic and services-based architecture
+		\item Migrated from PayPal SDK v1.0.10 to current version, improving payment processing reliability
+		\item Technologies: PostgreSQL, Node.js, React Native
 	\end{itemize}
-	\vspace{0.1cm}
+	
+	\textbf{DevOps Engineer, Cyberloop (oil tech)} \hfill Jan 2023--Feb 2024 
+	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+		\item Implemented CI/CD pipelines in bitbucket that reduced manual testing time by 75\%
+		\item Refactored Cypress tests and wrote majority of tests for multiple complex SaaS products
+		\item Reduced migration costs by 20\% by creating bash script to compress unstructured data on Firebase
+		\item Developed GenAI-powered tool that assigns labels for difficulty and time automatically
+		\item Maintained and deployed Docker containers using Portainer and Helm on Google Cloud Engine
+	\end{itemize}
 	
 	\textbf{Teacher Assistant - Cert IV in Cybersecurity, NDIS (TAFE)} \hfill Nov 2021--May 2022 
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item taught foundational Python programming and networking concepts
+	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+		\item Taught foundational Python programming and networking concepts
 		\item Provided hands-on training in network infrastructure, covering switches, routers, and server technologies
 	\end{itemize}
-	\vspace{0.1cm}
 	
 	\textbf{Python Tutor, Junior Engineers} \hfill Jun 2021--Feb 2023 
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
 		\item Rewrote programming classes for children and teens, making complex coding concepts easier to understand
-		\item Trained new instructors, helping them create engaging classroom experiences that keep students motivated
-		\item Led the advanced classes for 8-16 year olds, teaching Python OOP, Scratch, Arduino, Minitendo
+		\item Led advanced classes for 8-16 year olds, teaching Python OOP, Scratch, Arduino, Minitendo
 	\end{itemize}
-	\vspace{0.1cm}
 	
 	\textbf{Project Assistant/Crowdfunding Analyst, Kuranda Industries} \hfill Jul 2022--Nov 2022 
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Supported multi-million dollar real estate investment deals, helping the team make smarter and data-driven pricing calculations 
+	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+		\item Supported multi-million dollar real estate investment deals with data-driven pricing calculations 
 		\item Created predictive models that helped identify promising housing markets faster and more accurately
-		\item Managed minor renovation projects, handling budgeting, recruitment, and planning
 	\end{itemize}
 	
 	\section{Education}
 	\textbf{University of Queensland -- Bachelors of Computer Science/Commerce} \hfill 2021--Present \\	
 	\section{Projects -  \textbf{All projects available on} \href{https://github.com/CameronBadman}{GitHub} }
+	
+	\textbf{AgriMarket Live} \href{https://github.com/CSSE6400/2025_P3_AgriMarket}{[GitHub]}
+	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+		\item Built a platform for buying and selling produce with real-time market features
+		\item Deployed Go-based microservices on AWS ECS with containerized Docker architecture
+		\item Created React application with responsive design for optimal user experience
+		\item Managed infrastructure with Terraform, utilizing AWS Cognito for authentication and S3 for file storage
+		\item Technologies: Go, React, Docker, AWS ECS, Cognito, S3, Terraform
+	\end{itemize}
 	
 	\textbf{Distance Measurement Computer Vision} \href{https://github.com/CameronBadman/computer-vision}{[GitHub]}
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
@@ -94,16 +105,15 @@
 	
 	\textbf{Collaborative Drawing WebApp} \href{https://github.com/CameronBadman/Canvis-collab-webapp}{[GitHub]}
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item \textbf{Frontend:} Developed using Vite, ThreeJS, and Axios with a custom layer-based HTML canvas drawing system
-		\item \textbf{Backend:} Uses a Go-based microservice architecture utilizing goroutines, gin, gorrila-websocket, and AWS-SDK
-		\item \textbf{Infrastructure:} Containerized with Docker, orchestrated using Kubernetes, and deployed on AWS Fargate with Terraform
-		\item Integrated with AWS Cognito for authentication and AWS DynamoDB for scalable data storage
-		\item Technologies: Cognito, DynamoDB, Docker, Kubernetes, AWS fargate, Terraform, Go
+		\item Developed a real-time collaborative drawing application with custom HTML canvas drawing system
+		\item Built Go microservices with goroutines and WebSocket connections for real-time collaboration
+		\item Deployed on AWS using containerized architecture with Kubernetes orchestration
+		\item Technologies: Go, JavaScript, Docker, Kubernetes, AWS, WebSockets
 	\end{itemize}
 	
 	\textbf{Reddit Clone} \href{https://github.com/CameronBadman/Reddit-Clone}{[GitHub]}
 	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Created a social media client with an improved scroll-style UI built to be more interactive
+		\item Created a social media client with an improved scroll-style UI built to be more interactiveman 
 		\item Utilizes Vue.js and Quasar component library, with the axios api library
 		\item Technologies: Reddit-Api, Quasar, Vue.js, javascript
 	\end{itemize}
@@ -115,17 +125,17 @@
 	
 	\section{Open-Source Contributions}
 	\textbf{goproxy} \href{https://github.com/elazarl/goproxy}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Developed and implemented HTTP Archive (HAR) middleware with Prometheus/Grafana integration, utilising goroutines for non-blocking metrics collection
-		\item Working on modernising the project's testing infrastructure, Transitioning from different legacy approaches to a more modern testing practices using testify
+	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+		\item Developed HTTP Archive (HAR) middleware with Prometheus/Grafana integration using goroutines
+		\item Modernizing project's testing infrastructure, transitioning to modern testing practices using testify
 	\end{itemize}
 	
 	\section{Technologies and Skills}
-	\textbf{Languages:} Python, JavaScript, TypeScript, Go, C\#, Bash, SQL \\
-	\hspace*{0.5cm}\textbf{Web Technologies:} React, Vue.js, ASP.NET, HTML, CSS \\
-	\hspace*{0.5cm}\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, Nix, GCP \\
-	\hspace*{0.5cm}\textbf{Databases:} PostgreSQL, SQLite, Redis, Cassandra \\
-	\hspace*{0.5cm}\textbf{Tools:} Git, GitHub, Playwright, CI/CD, Kafka, Atlassian \\
-	\hspace*{0.5cm}\textbf{Operting systems:} Windows, Mac, Linux, Arch-Linux, NixOS, Ubuntu
+	\textbf{Languages:} Go, Java, Python, TypeScript, Bash, SQL, Gleam \\
+	\textbf{Web Technologies:} React, Vue.js, ASP.NET, HTML, CSS \\
+	\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, Nix, GCP \\
+	\textbf{Databases:} PostgreSQL, SQLite, Redis, Cassandra, DynamoDB \\
+	\textbf{Tools:} Git, GitHub, Playwright, CI/CD, Kafka, Atlassian \\
+	\textbf{Operating Systems:} Windows, Mac, Linux, Arch-Linux, NixOS, Ubuntu
 	
 \end{document}
