@@ -1,16 +1,10 @@
-% Compact Resume Template
 \documentclass[10pt,a4paper]{article}
 
-% Packages
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{calc}
 
-% Page layout
 \geometry{
 	a4paper,
 	left=0.25cm,
@@ -19,7 +13,6 @@
 	bottom=0.25cm
 }
 
-% Hyperlink setup
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue,
@@ -27,107 +20,107 @@
 	pdfborder={0 0 0}
 }
 
-% Custom section formatting
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1pt}{2pt}
+\renewcommand{\section}[1]{%
+	\vspace{-1pt}%
+	{\large\bfseries #1}\\[-0.5em]%
+	\rule{\linewidth}{0.4pt}%
+	\vspace{-1pt}%
+}
 
-% Custom item spacing
-\setlist[itemize]{itemsep=-1pt, parsep=0pt, topsep=1pt}
+\newenvironment{tightlist}{%
+	\vspace{-2pt}%
+	\begin{itemize}%
+		\setlength{\leftmargin}{0pt}%
+		\setlength{\itemindent}{0pt}%
+		\setlength{\itemsep}{-1pt}%
+		\setlength{\parsep}{0pt}%
+		\setlength{\topsep}{0pt}%
+		\setlength{\partopsep}{0pt}%
+	}{%
+	\end{itemize}%
+	\vspace{-5pt}%
+}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
 
 \begin{document}
 	\begin{center}
 		{\huge\textbf{Cameron Badman}} \\[0.5em]
 		\href{mailto:cbadwork@gmail.com}{cbadwork@gmail.com} |
 		+61 476056341 |
-		\href{https://github.com/CameronBadman}{GitHub}| 
+		\href{https://github.com/CameronBadman}{GitHub}|
 		\href{https://www.linkedin.com/in/cameron-badman-5314ba1b8/}{LinkedIn}
 	\end{center}
-	
 	\section{Professional Experience}
-	\textbf{Software Engineer, Base} \hfill Dec 2024--Present 
-	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+	\textbf{Software Engineer, Gumnut.dev} \hfill Sep 2025--Feb 2026
+	\begin{tightlist}
+		\item Developed advanced Zustand and Node.js integrations for real-time collaborative state management
+		\item Implemented Go data structures and sub-millisecond optimisations for text processing and editing pipelines
+		\item Researched and applied garbage collection strategies in distributed computing environments
+		\item Built presence cursor system enabling real-time multi-user awareness across collaborative sessions
+		\item \textit{Technologies: Go, Node.js, TypeScript, Zustand, WebSockets, Data Dtructures}
+	\end{tightlist}
+	\textbf{Software Engineer, Base} \hfill Dec 2024--Sep 2025
+	\begin{tightlist}
 		\item Implemented Github CI/CD pipelines to streamline development and deployment processes
 		\item Managed a small group of international developers across multiple time zones
 		\item Performed significant refactors to modularise code, enabling easy switching between monolithic and services-based architecture
 		\item Migrated from Node PayPal SDK v0.8 to 1.1.0, improving payment processing reliability
 		\item \textit{Technologies: PostgreSQL, Node.js, React Native}
-	\end{itemize}
-	
-	\textbf{DevOps Engineer, Cyberloop (Oil tech)} \hfill Jan 2023--Feb 2024 
-	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+	\end{tightlist}
+	\textbf{DevOps Engineer, Cyberloop (Oil tech)} \hfill Jan 2023--Feb 2024
+	\begin{tightlist}
 		\item Implemented CI/CD pipelines in bitbucket that reduced manual testing time by 75\%
 		\item Refactored Cypress tests and wrote majority of tests for multiple complex SaaS products
 		\item Reduced migration costs by 20\% by creating bash script to compress unstructured data on Firebase
 		\item Developed GenAI-powered tool that assigns labels for difficulty and time automatically
 		\item Maintained and deployed Docker containers using Portainer and Helm on Google Cloud Engine
-	\end{itemize}
-	
-	\textbf{Python Tutor, Junior Engineers} \hfill Jun 2021-- Present 
-	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+		\item \textit{Technologies: GCP, Docker, BitBucket pipelines, Jest, playwright}
+	\end{tightlist}
+	\textbf{CSSE6400 Tutor, University of Queensland} \hfill Feb 2026--Present
+	\begin{tightlist}
+		\item Teach cloud engineering concepts including Terraform, AWS, and Docker to undergraduate students
+		\item Write assessment solutions and testing suites for course assignments
+	\end{tightlist}
+	\textbf{Python Tutor, Junior Engineers} \hfill Jun 2021--Present
+	\begin{tightlist}
 		\item Rewrote programming classes for children and teens, making complex coding concepts easier to understand
 		\item Led advanced classes for 8-16 year olds, teaching Python OOP, Scratch, Arduino, Minitendo
-	\end{itemize}
-	
-	\textbf{Teacher Assistant - Cert IV in Cybersecurity, NDIS (TAFE)} \hfill Nov 2021--May 2022 
-	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
-		\item Taught foundational Python programming and networking concepts
-		\item Provided hands-on training in network infrastructure, covering switches, routers, and server technologies
-	\end{itemize}
-	
+	\end{tightlist}
 	\section{Education}
-	\textbf{University of Queensland -- Bachelors of Computer Science/Commerce} \hfill 2021--Present \\	
-	\section{Projects -  \textbf{All projects available on} \href{https://github.com/CameronBadman}{GitHub} }
-	
+	\textbf{University of Queensland -- Bachelors of Computer Science/Commerce} \hfill 2021--Present
+	\section{Projects - \textbf{All projects available on} \href{https://github.com/CameronBadman}{GitHub}}
 	\textbf{AgriMarket Live}: \textit{platform for buying and selling produce with real-time market features} \href{https://github.com/CSSE6400/2025_P3_AgriMarket}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+	\begin{tightlist}
 		\item Deployed Go-based microservices on AWS ECS with containerized Docker architecture
 		\item Created React Vite frontend with backend integration
 		\item Managed infrastructure with Terraform, utilizing AWS Cognito for authentication and S3 for file storage
 		\item Implemented real-time price updates and market analytics dashboard for agricultural commodities
 		\item \textit{Technologies: Go, React, Docker, AWS ECS, Cognito, S3, Terraform}
-	\end{itemize}
-	
-	
+	\end{tightlist}
 	\textbf{Gleam DynamoDB Client}: \textit{first gleam DynamoDB client} \href{https://github.com/CameronBadman/DynamoDb-gleam-client}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+	\begin{tightlist}
 		\item Implemented and interfaced with the low-level AWS API integrations and documentation
 		\item Designed type-safe monadic recursive dynamo json framework
-		\item learnt the gleam language inspuite of documentation and llm support being non-existent 
+		\item Learnt the gleam language in spite of documentation and llm support being non-existent
 		\item Integrated AWS signature authentication and secure communication protocols
 		\item \textit{Technologies: Gleam, AWS DynamoDB, AWS SDK, Functional Programming}
-	\end{itemize}
-	
-	
-	\textbf{Distance Measurement Computer Vision}: \textit{computer vision system to measure distances in real-time} \href{https://github.com/CameronBadman/computer-vision}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Implemented color detection and object tracking with live calibration functionality
-		\item Created a Tkinter GUI for real-time measurement display and system controls
-		\item \textit{Technologies: Python, OpenCV, NumPy, Tkinter}
-	\end{itemize}
-	
+	\end{tightlist}
 	\textbf{Collaborative Drawing WebApp}: \textit{Real-time collaborative drawing application} \href{https://github.com/CameronBadman/Canvis-collab-webapp}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
+	\begin{tightlist}
 		\item Developed custom HTML canvas drawing system with real-time synchronization
 		\item Built Go microservices with goroutines and WebSocket connections for real-time collaboration
 		\item Deployed on AWS using containerized architecture with Kubernetes orchestration
 		\item Implemented conflict resolution algorithms for concurrent drawing operations
 		\item \textit{Technologies: Go, JavaScript, Docker, Kubernetes, AWS, WebSockets}
-	\end{itemize}
-	
-	\textbf{Reddit Clone}: \textit{Reddit client with scroll-style UI} \href{https://github.com/CameronBadman/Reddit-Clone}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.05cm]
-		\item Created interactive social media platform with enhanced user experience
-		\item Implemented infinite scroll, real-time voting, and responsive design for mobile devices
-		\item \textit{Technologies: Reddit-Api, Quasar, Vue.js, javascript}
-	\end{itemize}
-	
+	\end{tightlist}
 	\section{Open-Source Contributions}
 	\textbf{goproxy}: \textit{Go HTTP proxy library forked by Stripe, Minikube, and Grafana} \href{https://github.com/elazarl/goproxy}{[GitHub]}
-	\begin{itemize}[label=\textbullet, itemsep=0.02cm]
+	\begin{tightlist}
 		\item Developed HTTP Archive (HAR) middleware with Prometheus/Grafana integration using goroutines
 		\item Modernizing project's testing infrastructure, transitioning to modern testing practices using testify
-	\end{itemize}
-	
+	\end{tightlist}
 	\section{Technologies and Skills}
 	\textbf{Languages:} Go, Java, Python, TypeScript, Bash, SQL, Gleam, C, C++
 	
@@ -140,6 +133,5 @@
 	\textbf{Tools:} Git, GitHub, Playwright, CI/CD, Kafka, Atlassian
 	
 	\textbf{Operating Systems:} Windows, Mac, Linux, Arch-Linux, NixOS, Ubuntu
-	
 	
 \end{document}
