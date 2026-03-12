@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[9pt,a4paper]{extarticle}
 
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -21,24 +21,24 @@
 }
 
 \renewcommand{\section}[1]{%
-	\vspace{-1pt}%
-	{\large\bfseries #1}\\[-0.5em]%
-	\rule{\linewidth}{0.4pt}%
-	\vspace{-1pt}%
+	\vspace{2pt}%
+	{\large\bfseries #1}\par\nobreak\vspace{-0.7em}%
+	\rule{\linewidth}{0.4pt}\par\nobreak%
+	\vspace{-2pt}%
 }
 
 \newenvironment{tightlist}{%
-	\vspace{-2pt}%
+	\vspace{-3pt}%
 	\begin{itemize}%
 		\setlength{\leftmargin}{0pt}%
 		\setlength{\itemindent}{0pt}%
-		\setlength{\itemsep}{-1pt}%
+		\setlength{\itemsep}{-2pt}%
 		\setlength{\parsep}{0pt}%
 		\setlength{\topsep}{0pt}%
 		\setlength{\partopsep}{0pt}%
 	}{%
 	\end{itemize}%
-	\vspace{-5pt}%
+	\vspace{-6pt}%
 }
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
@@ -46,7 +46,7 @@
 
 \begin{document}
 	\begin{center}
-		{\huge\textbf{Cameron Badman}} \\[0.5em]
+		{\huge\textbf{Cameron Badman}} \\[0.3em]
 		\href{mailto:cbadwork@gmail.com}{cbadwork@gmail.com} |
 		+61 476056341 |
 		\href{https://github.com/CameronBadman}{GitHub}|
@@ -59,7 +59,7 @@
 		\item Implemented Go data structures and sub-millisecond optimisations for text processing and editing pipelines
 		\item Researched and applied garbage collection strategies in distributed computing environments
 		\item Built presence cursor system enabling real-time multi-user awareness across collaborative sessions
-		\item \textit{Technologies: Go, Node.js, TypeScript, Zustand, WebSockets, Data Dtructures}
+		\item \textit{Technologies: Go, Node.js, TypeScript, Zustand, WebSockets, Data Structures}
 	\end{tightlist}
 	\textbf{Software Engineer, Base} \hfill Dec 2024--Sep 2025
 	\begin{tightlist}
@@ -76,7 +76,7 @@
 		\item Reduced migration costs by 20\% by creating bash script to compress unstructured data on Firebase
 		\item Developed GenAI-powered tool that assigns labels for difficulty and time automatically
 		\item Maintained and deployed Docker containers using Portainer and Helm on Google Cloud Engine
-		\item \textit{Technologies: GCP, Docker, BitBucket pipelines, Jest, playwright}
+		\item \textit{Technologies: GCP, Docker, BitBucket pipelines, Jest, Playwright}
 	\end{tightlist}
 	\textbf{CSSE6400 Tutor, University of Queensland} \hfill Feb 2026--Present
 	\begin{tightlist}
@@ -90,16 +90,25 @@
 	\end{tightlist}
 	\section{Education}
 	\textbf{University of Queensland -- Bachelors of Computer Science/Commerce} \hfill 2021--Present
+	\par\vspace{1pt}
 	\section{Projects - \textbf{All projects available on} \href{https://github.com/CameronBadman}{GitHub}}
-	\textbf{AgriMarket Live}: \textit{platform for buying and selling produce with real-time market features} \href{https://github.com/CSSE6400/2025_P3_AgriMarket}{[GitHub]}
+	\textbf{Hippocampus}: \textit{File-based vector database built for AI agent memory} \href{https://github.com/CameronBadman/Hippocampus}{[GitHub]}
 	\begin{tightlist}
-		\item Deployed Go-based microservices on AWS ECS with containerized Docker architecture
-		\item Created React Vite frontend with backend integration
-		\item Managed infrastructure with Terraform, utilizing AWS Cognito for authentication and S3 for file storage
-		\item Implemented real-time price updates and market analytics dashboard for agricultural commodities
-		\item \textit{Technologies: Go, React, Docker, AWS ECS, Cognito, S3, Terraform}
+		\item Built custom O(512 log n) binary search achieving 4,200x faster exact search than FAISS at 10k vectors
+		\item Designed file-based architecture with per-agent isolated .bin files and binary serialization (2KB per node)
+		\item Deployed serverless infrastructure on AWS Lambda, EFS, and S3 using Terraform
+		\item Implemented agent-to-agent orchestration with AWS Bedrock Nova for automated memory curation
+		\item \textit{Technologies: Go, AWS Lambda, Bedrock, EFS, S3, Terraform, Python}
 	\end{tightlist}
-	\textbf{Gleam DynamoDB Client}: \textit{first gleam DynamoDB client} \href{https://github.com/CameronBadman/DynamoDb-gleam-client}{[GitHub]}
+	\textbf{IT Support AI Agent}: \textit{Self-evolving IT support agent with tiered semantic memory} \href{https://github.com/CameronBadman/IT-Agent-Thing}{[GitHub]}
+	\begin{tightlist}
+		\item Architected three siloed Hippocampus instances for company, group, and user-level policy memory
+		\item Agent queries memories to contextualise responses, e.g. never returning Windows commands for a Mac-only organisation
+		\item Knowledge base evolves autonomously over time as policies and preferences are learned and stored
+		\item Built for the Claude Code Hackathon using Ollama Mistral 7B with structured tool calling
+		\item \textit{Technologies: Python, Go, Ollama, Hippocampus, Docker}
+	\end{tightlist}
+	\textbf{Gleam DynamoDB Client}: \textit{First Gleam DynamoDB client} \href{https://github.com/CameronBadman/DynamoDb-gleam-client}{[GitHub]}
 	\begin{tightlist}
 		\item Implemented and interfaced with the low-level AWS API integrations and documentation
 		\item Designed type-safe monadic recursive dynamo json framework
@@ -121,17 +130,21 @@
 		\item Developed HTTP Archive (HAR) middleware with Prometheus/Grafana integration using goroutines
 		\item Modernizing project's testing infrastructure, transitioning to modern testing practices using testify
 	\end{tightlist}
+	\section{Community}
+	\textbf{Startup Social Brisbane} -- Host \hfill \href{https://www.meetup.com}{Meetup}\\
+	\textbf{IT Social Brisbane} -- Host \hfill \href{https://www.meetup.com}{Meetup}
+	\par\vspace{1pt}
 	\section{Technologies and Skills}
 	\textbf{Languages:} Go, Java, Python, TypeScript, Bash, SQL, Gleam, C, C++
 	
 	\textbf{Web Technologies:} React, Vue.js, ASP.NET, HTML, CSS
 	
-	\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, Nix, GCP
+	\textbf{Cloud \& DevOps:} Amazon Web Services (AWS), Google Cloud Platform (GCP), Docker, Kubernetes, Terraform, Nix
 	
 	\textbf{Databases:} PostgreSQL, SQLite, Redis, Cassandra, DynamoDB, Valkey
 	
 	\textbf{Tools:} Git, GitHub, Playwright, CI/CD, Kafka, Atlassian
 	
-	\textbf{Operating Systems:} Windows, Mac, Linux, Arch-Linux, NixOS, Ubuntu
+	\textbf{Operating Systems:} Windows, Mac, Linux, Arch-Linux, NixOS, Ubuntu, Gentoo
 	
 \end{document}
